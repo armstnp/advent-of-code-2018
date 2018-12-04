@@ -25,11 +25,6 @@
     :else
     [:wake (parse-re-int wakes-up-re event)]))
 
-(def events
-  (->> (str/split input #"\n")
-       sort
-       (map parse-event)))
-
 (defn handle-event [{:keys [curr-guard guard-minute-tallies asleep-since] :as state}
                     [event-type event-arg]]
   (case event-type
