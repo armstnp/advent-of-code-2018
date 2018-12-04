@@ -23,11 +23,6 @@
 (defn top [rect] (:top rect))
 (defn right [rect] (+ (left rect) (:width rect)))
 (defn bottom [rect] (+ (top rect) (:height rect)))
-(defn is-in-rect? [rect x y]
-  (and (>= x (left rect))
-       (< x (right rect))
-       (>= y (top rect))
-       (< y (bottom rect))))
 
 ;; Part 1
 
