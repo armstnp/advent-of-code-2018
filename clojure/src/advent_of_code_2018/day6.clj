@@ -3,6 +3,8 @@
             [clojure.string :as str]
             [clojure.set :as set]))
 
+(set! *unchecked-math* :warn-on-boxed)
+
 (def input (core/read-input "day6.txt"))
 
 (defn parse-point [line]
@@ -16,7 +18,7 @@
 (def ->index first)
 (def ->point second)
 
-(defn distance [[x1 y1] [x2 y2]]
+(defn distance [[^int x1 ^int y1] [^int x2 ^int y2]]
   (+ (Math/abs (- x1 x2)) (Math/abs (- y1 y2))))
 
 (def min-x (- (apply min (map first input-points)) 10))
