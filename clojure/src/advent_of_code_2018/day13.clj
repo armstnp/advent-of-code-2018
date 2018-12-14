@@ -1,6 +1,6 @@
 (ns advent-of-code-2018.day13
-(:require [advent-of-code-2018.core :as core]
-          [clojure.string :as str]))
+  (:require [advent-of-code-2018.core :as core]
+            [clojure.string :as str]))
 
 (set! *unchecked-math* :warn-on-boxed)
 
