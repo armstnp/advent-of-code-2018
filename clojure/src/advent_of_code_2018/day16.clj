@@ -9,11 +9,6 @@
 
 ;; Instructions
 
-#_(core/defn-split read-value [v-type address | registers]
-  (case v-type
-    :register (get registers address)
-    :immediate address))
-
 (core/defn-split immediate [value | registers]
   value)
 
