@@ -53,6 +53,10 @@
   [m-v m-f]
   (reduce (fn [m [k f]] (update m k f)) m-v m-f))
 
+(defn map-vals
+  [f m]
+  (reduce #(update %1 %2 f) m (keys m)))
+
 (defn iterate-to
   [incomplete? & iter-args]
   (->> (apply iterate iter-args)
